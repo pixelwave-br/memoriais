@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -401,6 +401,60 @@
 
       .qr-container {
         flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        padding: 1.25rem;
+      }
+
+      header h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero__text h2 {
+        font-size: 1.35rem;
+      }
+
+      .story-card {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      }
+
+      .biography {
+        padding: 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem 0.75rem 1.5rem;
+      }
+
+      .layout {
+        padding: 1rem;
+        border-radius: 20px;
+      }
+
+      header p {
+        font-size: 0.85rem;
+      }
+
+      .story-card img {
+        height: auto;
+        max-height: 280px;
+      }
+
+      .gallery__item {
+        min-height: 120px;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
       }
     }
   </style>
