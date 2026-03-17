@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memoriais Eternos | Plano Anual</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #02040b;
+      --panel: rgba(15, 23, 42, 0.92);
+      --accent: #7dd3fc;
+      --accent-strong: #22d3ee;
+      --accent-warm: #fbbf24;
+      --soft: #f3f5fb;
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #02040b;
+      color: var(--soft);
+      min-height: 100vh;
+    }
+    .hero {
+      background: linear-gradient(180deg, rgba(5,10,20,0.94), rgba(2,6,11,0.95)),
+        url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&amp;fit=crop&amp;w=1600&amp;q=80') center/cover;
+      min-height: 90vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:3rem 1rem;
+    }
+    .hero__inner {
+      max-width: 900px;
+      position:relative;
+      z-index:1;
+    }
+    .hero__inner h1 {
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      letter-spacing:0.2em;
+      text-transform:uppercase;
+      margin-bottom:1rem;
+    }
+    .hero__inner p {
+      font-size:1.2rem;
+      color:#ced7ee;
+      margin-bottom:2rem;
+      line-height:1.6;
+    }
+    .hero__inner a {
+      display:inline-flex;
+      align-items:center;
+      gap:0.8rem;
+      padding:1rem 2rem;
+      border-radius:999px;
+      background:linear-gradient(120deg,var(--accent),var(--accent-strong));
+      color:#020617;
+      font-weight:700;
+      text-decoration:none;
+      letter-spacing:0.05em;
+      box-shadow:0 20px 60px rgba(125,211,252,0.4);
+    }
+    .section {
+      padding:3.5rem 1rem;
+      text-align:center;
+    }
+    .section h2 {
+      font-size: clamp(2.2rem, 3vw, 3rem);
+      margin-bottom:0.5rem;
+      text-align:center;
+    }
+    .section p {
+      max-width:760px;
+      margin:0.2rem auto 1.5rem;
+      text-align:center;
+      color:#cbd5f5;
+    }
+    .feature-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:1.25rem;
+      max-width:1200px;
+      margin:0 auto;
+    }
+    .feature {
+      padding:1.5rem;
+      border-radius:20px;
+      background:linear-gradient(145deg, rgba(125,211,252,0.1), rgba(8,12,25,0.95));
+      border:1px solid rgba(125,211,252,0.3);
+      min-height:200px;
+      text-align:center;
+    }
+    .feature h3 {
+      margin-bottom:0.5rem;
+      font-size:1.4rem;
+    }
+    .feature p {
+      line-height:1.7;
+    }
+    .pricing {
+      display:flex;
+      justify-content:center;
+      margin-top:2rem;
+    }
+    .pricing-card {
+      padding:2rem;
+      border-radius:26px;
+      background:rgba(0,6,12,0.85);
+      border:1px solid rgba(125,211,252,0.5);
+      max-width:360px;
+      text-align:center;
+      box-shadow:0 25px 60px rgba(0,0,0,0.6);
+    }
+    .pricing-card span {
+      font-size:3rem;
+      font-weight:700;
+      display:block;
+    }
+    .pricing-card small {
+      display:block;
+      color:#8c9af8;
+      margin-bottom:1rem;
+    }
+    .image-grid {
+      margin-top:2rem;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1rem;
+    }
+    .image-grid img {
+      width:100%;
+      border-radius:18px;
+      height:220px;
+      object-fit:cover;
+      border:1px solid rgba(255,255,255,0.1);
+    }
+    .cta-section {
+      background:linear-gradient(120deg, rgba(125,211,252,0.08), rgba(5,10,20,0.95));
+      border-top:1px solid rgba(125,211,252,0.35);
+      border-bottom:1px solid rgba(125,211,252,0.35);
+    }
+    .cta-inner {
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:1rem;
+      padding:2rem 1rem;
+    }
+    .cta-inner h3 {
+      margin-bottom:0.4rem;
+    }
+    .cta-inner p {
+      color:#cbd5f5;
+    }
+    .cta-inner a {
+      background:linear-gradient(140deg, var(--accent), var(--accent-strong));
+      color:#020617;
+      padding:1rem 2rem;
+      border-radius:999px;
+      font-weight:700;
+      text-decoration:none;
+      box-shadow:0 20px 60px rgba(125,211,252,0.35);
+    }
+    footer {
+      text-align:center;
+      padding:2rem 1rem 3rem;
+      color:#94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <h1>Memoriais Eternos</h1>
+      <p class="sub">Transformamos o legado em uma vitrine digital elegante: fotos e QR Code digital para confeccionar a plaquinha e adicionar a lápide, tudo pronto para emocionar quem visita.</p>
+      <div style="display:flex;flex-direction:column;gap:.75rem;align-items:center;">
+        <a href="joao_silva/index.html" class="btn-primary" style="background:rgba(255,255,255,0.1);color:#f4f6fb;box-shadow:none;border:1px solid rgba(255,255,255,0.25);">Ver memorial exemplo</a>
+        <a href="https://wa.me/5534991276318?text=Quero%20contratar%20Memoriais%20Eternos" target="_blank" rel="noreferrer" class="btn-primary">Garanta o memorial agora</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Porque este plano emociona e converte</h2>
+    <p class="lead">A cada clique pré-aprovado, entregamos páginas com narrativa guiada, galeria em destaque e o QR Code pronto para ser fixado no túmulo.</p>
+    <div class="feature-grid">
+      <article class="feature">
+        <h3>Crie um tributo cinematográfico</h3>
+        <p>Detalhes luminosos, tipografias largas e contrastes suaves conduzem o visitante ao sentimento certo.</p>
+      </article>
+      <article class="feature">
+        <h3>Galeria viva</h3>
+        <p>Fotos intercaladas com textos curtos e títulos que lembram momentos marcantes.</p>
+      </article>
+      <article class="feature">
+        <h3>QR Code premium</h3>
+        <p>Ao contratar, enviamos o código digital já em resolução alta para instalar na lápide ou na placa memorial.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>PAGAMENTO UNICO AO ANO</h2>
+    <p class="lead">Um único pagamento anual e o memorial permanece ativo, consultar valores para atualizar fotos e dados da pagina, suporte instantâneo.</p>
+    <div class="pricing">
+      <div class="pricing-card">
+        <span>R$ 79,90</span>
+        <small>Pagamento único por 12 meses</small>
+        <p>Inclui produção completa, QR Code digital com alta resolução em pdf, atualização de fotos e suporte via WhatsApp.</p>
+      </div>
+    </div>
+    <div class="image-grid">
+      <img src="image1.jpg" alt="Registro de memória" />
+      <img src="image2.jpg" alt="Velas e flores" />
+      <img src="image3.jpg" alt="Pessoa olhando fotos" />
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <div class="cta-inner">
+      <div>
+        <h3>Pronto para emocionar?</h3>
+        <p>Envie um WhatsApp e fale com a nossa equipe.</p>
+      </div>
+      <a href="https://wa.me/5534991276318?text=Quero%20contratar%20Memoriais%20Eternos" target="_blank" rel="noreferrer">Quero contratar</a>
+    </div>
+  </section>
+
+</body>
+</html>
